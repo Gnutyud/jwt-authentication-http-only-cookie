@@ -115,7 +115,7 @@ const logout = (req, res) => {
     sameSite: "None", //cross-site cookie
     path: "/auth",
   });
-  res.json({ message: "Cookie cleared" });
+  res.status(200).json({ message: "Cookie cleared" });
 };
 
 module.exports = {
