@@ -8,9 +8,7 @@ function Home() {
 
   const handleLogout = async () => {
     try {
-      await axios.post("/auth/logout", {
-        withCredentials: true,
-      });
+      await axios.post("/auth/logout");
       logout();
       navigate("/login");
     } catch (error) {

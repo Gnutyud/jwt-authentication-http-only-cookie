@@ -19,12 +19,7 @@ function Login() {
         const response = await axios.post(
           "/auth",
           JSON.stringify({ username: email, password }),
-          {
-            headers: { "Content-Type": "application/json" },
-            withCredentials: true,
-          },
         );
-        console.log(response)
         login(response?.data?.user);
         setEmail("");
         setPassword("");
